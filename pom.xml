@@ -4,17 +4,23 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.blog.dd</groupId>
-	<artifactId>SpringBootC01</artifactId>
+	<artifactId>SpringBoot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>SpringBootC01</name>
+	<name>SpringBoot</name>
 	<description>Demo project for Spring Boot</description>
+
+	<modules>
+		<module>SpringBoot-01</module>
+	</modules>
+
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.1.RELEASE</version>
+		<!--<version>1.3.0.RC1</version>-->
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -23,19 +29,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
 
 	<build>
 		<plugins>
@@ -46,5 +39,26 @@
 		</plugins>
 	</build>
 
-
+	<repositories>
+		<repository>
+			<id>letv-repo</id>
+			<name>*letv*</name>
+			<url>http://maven.letv.cn/nexus/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>letv-repo-snapshots</id>
+			<name>letv snapshots Repository</name>
+			<url>http://maven.letv.cn/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>saas-repo</id>
+			<name>saas Repository</name>
+			<url>http://10.154.156.83:10081/nexus/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>saas-repo-snapshots</id>
+			<name>saas snapshots Repository</name>
+			<url>http://10.154.156.83:10081/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
 </project>
