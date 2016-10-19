@@ -1,6 +1,6 @@
 package dd;
 
-import com.blog.dd.web.HelloController;
+import dd.web.HelloController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
