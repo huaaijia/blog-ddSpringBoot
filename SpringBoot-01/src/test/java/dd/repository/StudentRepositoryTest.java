@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by huaaijia on 2016/10/20.
@@ -43,5 +44,27 @@ public class StudentRepositoryTest {
         studentRepository.delete(studentRepository.findByName("AAA"));
         // 测试findAll, 查询所有记录, 验证上面的删除是否成功
         Assert.assertEquals(12, studentRepository.findAll().size());
+    }
+
+    /**
+     * 事务章节
+     * @throws Exception
+     */
+    @Test
+    @Transactional
+    public void testTransaction() throws Exception {
+        // 创建10条记录
+        studentRepository.save(new Student("Oct01", 10));
+        studentRepository.save(new Student("Oct02", 20));
+        studentRepository.save(new Student("Oct03", 30));
+        studentRepository.save(new Student("Oct04", 40));
+        studentRepository.save(new Student("Oct05", 50));
+        studentRepository.save(new Student(null, 60));
+        studentRepository.save(new Student("Oct07", 70));
+        studentRepository.save(new Student("Oct08", 80));
+        studentRepository.save(new Student("Oct09", 90));
+        studentRepository.save(new Student("Oct10", 100));
+
+
     }
 }
