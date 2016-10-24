@@ -1,12 +1,28 @@
 package dd.web;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by huaaijia on 2016/10/24.
  */
 @RestController
 public class HelloController {
+
+    @RequestMapping("/")
+    public ModelAndView index() {
+        return new ModelAndView("index");
+    }
+
+    @RequestMapping("/hello_user")
+    public ModelAndView hello_User() {
+        return new ModelAndView("hello_user");
+    }
+
+    @RequestMapping("/login")
+    public ModelAndView login() {
+        return new ModelAndView("login");
+    }
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     @ResponseBody
@@ -21,4 +37,6 @@ public class HelloController {
          2016-10-24 15:47:02.701  INFO 6471 --- [nio-8091-exec-8] dd.aspect.WebLogAspect                   : RESPONSE : Hello abc
          */
     }
+
+
 }
