@@ -13,6 +13,8 @@
 
 	<modules>
 		<module>SpringBoot-01</module>
+		<module>SpringBoot-02</module>
+		<module>SpringBoot-03</module>
 	</modules>
 
 
