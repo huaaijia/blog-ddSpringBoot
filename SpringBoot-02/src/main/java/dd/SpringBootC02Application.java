@@ -3,11 +3,13 @@ package dd;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * Created by huaaijia on 2016/10/21.
  */
 @SpringBootApplication
+@EnableScheduling
 @ComponentScan({"dd.*"})
 public class SpringBootC02Application {
     public static void main(String[] args) {
