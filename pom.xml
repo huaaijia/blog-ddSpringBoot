@@ -17,6 +17,11 @@
 		<module>SpringBoot-03</module>
 		<module>SpringBoot-04</module>
 		<module>SpringBoot-05</module>
+
+		<module>SpringCloud-01-Server</module>
+		<module>SpringCloud-02-Service</module>
+		<module>SpringCloud-03-Ribbon</module>
+		<module>SpringCloud-04-Feign</module>
 	</modules>
 
 
@@ -44,6 +49,12 @@
 	</build>
 
 	<repositories>
+		<repository>
+			<id>repo</id>
+			<name>*publie*</name>
+			<url>http://repo1.maven.org/maven2/</url>
+		</repository>
+
 		<repository>
 			<id>letv-repo</id>
 			<name>*letv*</name>
