@@ -15,7 +15,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 /**
  * Created by huaaijia on 2016/10/21.
  */
-@Configuration
+//@Configuration
 public class RedisConfig {
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
@@ -37,4 +37,5 @@ public class RedisConfig {
         template.setValueSerializer(new RedisObjectSerializer());
         return template;
     }
+
 }

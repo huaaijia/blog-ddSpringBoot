@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * Created by huaaijia on 2016/10/20.
@@ -11,7 +12,7 @@ import javax.persistence.Id;
  * 配合SpringBoot jpa实现
  */
 @Entity(name="student")
-public class Student {
+public class Student implements Serializable{
 
     @Id
     @GeneratedValue
