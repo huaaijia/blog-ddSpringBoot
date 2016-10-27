@@ -23,6 +23,8 @@
 		<module>SpringCloud-03-Ribbon</module>
 		<module>SpringCloud-04-Feign</module>
 		<module>SpringCloud-05-ConfigServer</module>
+		<module>SpringCloud-06-ConfigClient</module>
+		<module>SpringCloud-07-Zuul</module>
 	</modules>
 
 
