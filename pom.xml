@@ -22,6 +22,7 @@
 		<module>SpringCloud-02-Service</module>
 		<module>SpringCloud-03-Ribbon</module>
 		<module>SpringCloud-04-Feign</module>
+		<module>SpringCloud-05-ConfigServer</module>
 	</modules>
 
 
