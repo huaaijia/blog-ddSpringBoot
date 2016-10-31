@@ -27,6 +27,8 @@
 		<module>SpringCloud-07-Zuul</module>
 		<module>SpringCloud-08-MultiServer</module>
 		<module>SpringCloud-09-SpotMultiServer</module>
+		<module>SpringCloud-10-ConfigServerExtend</module>
+		<module>SpringCloud-11-ConfigClientExtend</module>
 	</modules>
 
 
