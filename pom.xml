@@ -29,7 +29,8 @@
 		<module>SpringCloud-09-SpotMultiServer</module>
 		<module>SpringCloud-10-ConfigServerExtend</module>
 		<module>SpringCloud-11-ConfigClientExtend</module>
-	</modules>
+        <module>SpringCloud-12-RabbitmqSender</module>
+    </modules>
 
 
 	<parent>

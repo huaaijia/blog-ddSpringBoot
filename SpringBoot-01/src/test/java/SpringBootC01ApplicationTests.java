@@ -17,7 +17,9 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
+/**
+ * 使用MockServletContext来构建一个空的WebApplicationContext，这样我们创建的HelloController就可以在@Before函数中创建并传递到MockMvcBuilders.standaloneSetup（）函数中。
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 //@SpringBootTest
 @SpringApplicationConfiguration(classes = MockServletContext.class)
@@ -25,10 +27,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class SpringBootC01ApplicationTests {
 
 	private MockMvc mvc;
+
 	@Before
 	public void setUp() throws Exception {
 		mvc = MockMvcBuilders.standaloneSetup(new HelloController()).build();
 	}
+
 	@Test
 	public void getHello() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
